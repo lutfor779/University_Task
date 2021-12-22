@@ -1,14 +1,21 @@
-import { Grid } from '@mui/material';
+import { ListItem, ListItemButton, ListItemText, } from '@mui/material';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const University = ({ university }) => {
-    console.log(university)
+    const navigate = useNavigate();
+
+    const handleDetails = (name) => {
+        navigate(`university/${name}`);
+    }
 
     return (
-
-        <Grid item xs={2} sm={4} md={4}>
-            <h1>{university.name}</h1>
-        </Grid>
+        <ListItem sx={{ bgcolor: 'navy', my: 4, borderRadius: 16 }}>
+            <ListItemButton sx={{ color: 'white', borderRadius: 16 }}
+                onClick={() => handleDetails(university.name)}>
+                <ListItemText primary={university.name} />
+            </ListItemButton>
+        </ListItem>
 
     );
 };
