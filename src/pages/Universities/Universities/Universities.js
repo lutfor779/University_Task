@@ -8,12 +8,12 @@ const Universities = () => {
 
 
     return (
-        isLoading ? <div>
+        isLoading ? <div style={{ marginTop: '15vh' }}>
             <h1>Loading</h1>
             <CircularProgress />
         </div>
             :
-            <Container>
+            <Container style={{ marginTop: '8vh' }}>
                 <Box sx={{ flexGrow: 1 }}>
                     <List sx={{ width: '100%', maxWidth: '520px', m: 'auto' }} >
                         {

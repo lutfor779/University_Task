@@ -11,16 +11,16 @@ const Home = () => {
             setHomeData(universities.slice(5, 15))
         }
     }, [universities]);
-    console.log(homeData)
+
 
     return (
-        isLoading ? <div>
+        isLoading ? <div style={{ marginTop: '15vh' }}>
             <h1>Loading</h1>
             <CircularProgress />
         </div>
 
             :
-            <div>
+            <div style={{ marginTop: '8vh' }}>
                 <img src="https://cur.glitter-graphics.net/pub/3299/3299065hkr1frjavx.gif" alt="banner" height={200} width={"100%"} />
                 <Container>
                     <Box sx={{ flexGrow: 1 }}>
