@@ -1,4 +1,4 @@
-import { Box, Container, List } from '@mui/material';
+import { Box, CircularProgress, Container, List } from '@mui/material';
 import React from 'react';
 import useData from '../../../hooks/useData';
 import University from '../University/University';
@@ -8,11 +8,14 @@ const Universities = () => {
 
 
     return (
-        isLoading ? <h1>Loading...</h1>
+        isLoading ? <div>
+            <h1>Loading</h1>
+            <CircularProgress />
+        </div>
             :
             <Container>
                 <Box sx={{ flexGrow: 1 }}>
-                    <List sx={{ width: '100%', maxWidth: 'auto' }} >
+                    <List sx={{ width: '100%', maxWidth: '520px', m: 'auto' }} >
                         {
                             universities.map((university, index) => <University key={index} university={university} />)
                         }

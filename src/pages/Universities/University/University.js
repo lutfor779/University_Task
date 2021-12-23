@@ -6,12 +6,12 @@ const University = ({ university }) => {
     const navigate = useNavigate();
 
     const handleDetails = (name) => {
-        navigate(`university/${name}`);
+        navigate(`/universities/university/${name}`);
     }
 
     return (
         <ListItem sx={{ bgcolor: 'navy', my: 4, borderRadius: 16 }}>
-            <ListItemButton sx={{ color: 'white', borderRadius: 16 }}
+            <ListItemButton sx={{ color: 'white', borderRadius: 16, textAlign: 'center' }}
                 onClick={() => handleDetails(university.name)}>
                 <ListItemText primary={university.name} />
             </ListItemButton>

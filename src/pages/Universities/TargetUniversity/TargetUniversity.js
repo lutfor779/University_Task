@@ -10,8 +10,7 @@ const TargetUniversity = () => {
 
     const data = !isLoading && universities.find(university => university.name === name);
 
-    console.log(data)
-
+    // console.log(data)
     return (
         isLoading ? <h1>Loading...</h1>
             :
@@ -22,17 +21,21 @@ const TargetUniversity = () => {
                             {data.name}
                         </Typography>
                         <br />
-                        <Typography variant="subtitle1" gutterBottom component="div">
+                        {
+                            data[`state-province`] && <Typography variant="body2" gutterBottom>
+                                State: {data[`state-province`]}
+                            </Typography>
+                        }
+                        <Typography variant="h6" gutterBottom component="div">
                             Country: {data?.country}
                         </Typography>
-                        <Typography variant="body2" gutterBottom>
+                        <br />
+                        <Typography variant="body1" gutterBottom>
                             Domain: {data?.domains[0]}
                         </Typography>
-
-
                         <Link href={data?.web_pages[0]} rel="noreferrer" target="_blank" underline="none">
                             <Button
-                                sx={{ px: 8, mt: 4 }}
+                                sx={{ px: 8 }}
                                 variant="contained"
                                 color="info">Visit</Button>
                         </Link>
