@@ -8,7 +8,7 @@ const University = ({ university }) => {
     const handleDetails = (name) => {
         navigate(`/universities/university/${name}`);
     }
-
+    // console.log(university.name)
     return (
         <ListItem sx={{ bgcolor: 'navy', my: 4, borderRadius: 16 }}>
             <ListItemButton sx={{ color: 'white', borderRadius: 16, textAlign: 'center' }}

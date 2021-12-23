@@ -1,4 +1,4 @@
-import { Box, CircularProgress, Container, List } from '@mui/material';
+import { Box, CircularProgress, Container, List, Typography } from '@mui/material';
 import React from 'react';
 import useData from '../../../hooks/useData';
 import University from '../University/University';
@@ -15,6 +15,9 @@ const Universities = () => {
             :
             <Container style={{ marginTop: '8vh' }}>
                 <Box sx={{ flexGrow: 1 }}>
+                    <Typography variant="h3" component="div" gutterBottom sx={{ color: "salmon", pt: 3 }}>
+                        All Universities
+                    </Typography>
                     <List sx={{ width: '100%', maxWidth: '520px', m: 'auto' }} >
                         {
                             universities.map((university, index) => <University key={index} university={university} />)
