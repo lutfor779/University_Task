@@ -5,7 +5,7 @@ const useData = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://universities.hipolabs.com/search?country=India')
+        fetch('fakeDB.json')
             .then(res => res.json())
             .then(data => {
                 setUniversities(data);
