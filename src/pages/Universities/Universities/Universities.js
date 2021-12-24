@@ -15,7 +15,7 @@ const Universities = () => {
 
     useEffect(() => {
         if (universities.length > 0) {
-            setItems(universities.slice((page - 1) * 10, page * 10 + 10))
+            setItems(universities.slice((page - 1) * 10, (page - 1) * 10 + 10))
         }
     }, [page, universities]);
 
