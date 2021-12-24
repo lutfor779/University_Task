@@ -12,7 +12,7 @@ const Home = () => {
 
     useEffect(() => {
         if (universities.length > 0) {
-            setHomeData(universities.slice(5, 15))
+            setHomeData(universities.slice(90, 105))
         }
     }, [universities]);
 
